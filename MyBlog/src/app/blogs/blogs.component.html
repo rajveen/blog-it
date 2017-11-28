@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col s12">
+    <ul class="tabs blue-grey lighten-4 z-depth-1">
+      <li class="tab col s3"><a href="#" [routerLink]="['/blogs']" id="0" (click)="categorize(0)">All Blogs</a></li>
+      <li class="tab col s3"><a href="#" id="1" [routerLink]="['/blogs']" (click)="categorize(1)">Sports</a></li>
+      <li class="tab col s3"><a href="#" id="2" [routerLink]="['/blogs']" (click)="categorize(2)">Technology</a></li>
+      <li class="tab col s3"><a href="#" id="3" [routerLink]="['/blogs']" (click)="categorize(3)">Entertainment</a></li>
+      <div class="indicator" style="z-index:1"></div>
+    </ul>
+  </div>
+  <div id="test1" class="col s12">
+
+    <div class="row" *ngFor="let filteredBlog of filteredBlogs">
+
+      <div class="col s12">
+        <a [routerLink]="['/blogs', filteredBlog.id]" href="#">
+          <div class="card-panel grey-text text-darken-1 z-depth-1 hoverable">
+            <h4 class="card-title truncate"><a [routerLink]="['/blogs', filteredBlog.id]" href="#">{{filteredBlog.title}}</a></h4>
+            <div class="card__meta valign-wrapper">
+        <span>
+          <i class="tiny material-icons">person</i>{{filteredBlog.author}} on {{filteredBlog.date | date:'medium'}}
+        </span>
+            </div>
+            <span class="grey-text text-darken-4 truncate blog-content">{{filteredBlog.content}}</span>
+            <hr>
+            <!--<div class="divider"></div>-->
+            <div class="card-action">
+        <span class="blue-text text-darken-2 valign-wrapper">
+          <i class="tiny material-icons">label</i>
+          &nbsp;{{(filteredBlog.category == 1) ? "Sports" : ((filteredBlog.category == 2) ? "Technology" : "Entertainment")}}
+        </span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</div>

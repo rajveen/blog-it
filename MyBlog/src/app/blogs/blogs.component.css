@@ -1,0 +1,48 @@
+/*span {*/
+  /*white-space: pre-wrap;*/
+/*}*/
+
+.tabs .indicator {
+  background-color: #0d47a1;
+}
+
+.tabs .tab a.active {
+  color: #0d47a1;
+}
+
+.tabs .tab a:hover {
+  background-color: #b0bec5;
+}
+
+.tabs .tab a {
+  color: #272d4e;
+}
+
+div.card-panel a {
+  color: #0d47a1;
+}
+
+div {
+  /*padding-top: 1%;*/
+  /*padding-bottom: 1%;*/
+  /*margin: 0.1%;*/
+}
+
+.blog-content {
+  font-size: large;
+  margin: 1%;
+}
+
+.card-panel {
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  //margin: 1em 0;
+  padding: 0;
+}
